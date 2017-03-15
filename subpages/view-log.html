@@ -1,0 +1,20 @@
+<h1>Log</h1>
+<div class="row">
+	<div class="col-md-12" style="padding: 15px; margin-bottom: 10px; background-color: #ded4ca; border-radius: 10px;">
+		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-overall-log">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span><span class="hidden-xs">   Add log</span>
+		</button>
+		<button type="button" class="btn btn-default" id="btn-overall-log-save-changes" disabled="disabled">
+			<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span><span class="hidden-xs">   Save changes</span>
+		</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-9" id="div-overall-log-intro" style="display: none;">
+		<p>Add logs by clicking above. It's a great way to keep track of your productivity.</p>
+	</div>
+</div>
+<!-- @TODO: find a way to make the background brighter without affecting the children of the div -->
+<div class="row lined-paper">
+	<div id="div-overall-log" class="col-md-9"></div>
+</div>

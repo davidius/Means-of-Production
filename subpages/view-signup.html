@@ -1,0 +1,38 @@
+<div class="container" style="height: 125vh;">
+    <h1>You're not too far from productivity awesomeness...</h1>
+    <form id="signupForm">
+    	<div class="form-group">
+        <label for="txt-first-name">First name</label>
+        <input type="text" class="form-control" name="txt-first-name" id="txt-first-name" value="">
+        </div>
+
+        <div class="form-group">
+        <label for="txt-last-name">Last name</label>
+        <input type="text" class="form-control" name="txt-last-name" id="txt-last-name" value="">
+        </div>
+
+        <div class="form-group has-feedback" id="group-email-signup">
+            <label for="txt-email" id="label-email-signup">Email address</label>
+            <input type="text" class="form-control" name="txt-email" id="txt-email" value="">
+            <span id="icon-email-available-signup" class="form-control-feedback" aria-hidden="true"></span>
+            <span id="icon-email-available-signup-sr" class="sr-only">(success)</span>
+        </div>
+
+        <div class="form-group has-feedback" id="group-password-signup">
+            <label for="txt-password" id="label-password-signup">Password (7 characters or more, including at least one number or special character)</label>
+            <input type="password" class="form-control" name="txt-password" id="txt-password" value="">
+            <span id="icon-password-valid-signup" class="form-control-feedback" aria-hidden="true"></span>
+            <span id="icon-password-valid-signup-sr" class="sr-only">(success)</span>
+        </div>
+
+        <!-- <label for="txt-password-confirm">Confirm Password</label>
+        <input type="password" name="txt-password-confirm" id="txt-password-confirm" value=""> -->
+
+        <button type="submit" class="btn btn-default" id="submitSignupButton" disabled="disabled">Sign up</button>
+	</form>
+
+    <!-- Render the OAuth authentication links  -->
+	<!-- <a href="http://todo-doubleup.rhcloud.com/oauth/facebook" data-role="button" class="facebookButton">Sign in with Facebook</a>
+	<a href="http://todo-doubleup.rhcloud.com/oauth/twitter" data-role="button" id="twitterButton">Sign in with Twitter</a>
+	<a href="http://todo-doubleup.rhcloud.com/oauth/google" data-role="button" id="googleButton">Sign in with Google</a> -->
+</div>

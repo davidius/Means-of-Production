@@ -1,0 +1,1206 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"pomodoro",
+				"pomodoroOnABreak"
+			],
+			[
+				"pomo",
+				"pomodoroOnABreak"
+			],
+			[
+				"timeDone",
+				"timeDoneStored"
+			],
+			[
+				"glyphi",
+				"glyphicon-play"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"check",
+				"checkPreAuth"
+			],
+			[
+				"draw",
+				"drawProductivityPie"
+			],
+			[
+				"un",
+				"unorderedObj"
+			],
+			[
+				"getCurrent",
+				"getCurrentProject"
+			],
+			[
+				"aver",
+				"averageProductivity"
+			],
+			[
+				"time",
+				"timeOrUnits"
+			],
+			[
+				"total",
+				"totalTime"
+			],
+			[
+				"chart",
+				"chartdiv"
+			],
+			[
+				"html",
+				"htmlIntro"
+			],
+			[
+				"tot",
+				"totalProductivity"
+			],
+			[
+				"range",
+				"rangeProductivity"
+			],
+			[
+				"work",
+				"workDoneInRange"
+			],
+			[
+				"makeDate",
+				"makeDateObject"
+			],
+			[
+				"div-project",
+				"div-project-graph"
+			],
+			[
+				"todo",
+				"todoPreference"
+			],
+			[
+				"curr",
+				"currentTask"
+			],
+			[
+				"cur",
+				"currentTask"
+			],
+			[
+				"local",
+				"localStorage"
+			],
+			[
+				"hand",
+				"handleSignup"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"Curre",
+				"currentTask"
+			],
+			[
+				"loc",
+				"localStorage"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"curre",
+				"currentTask"
+			],
+			[
+				"done",
+				"doneOpenTag"
+			],
+			[
+				"list-group",
+				"list-group-item"
+			],
+			[
+				"current",
+				"currentTime"
+			],
+			[
+				"po",
+				"pomodoroRunning"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"set",
+				"setupPomodoroPage"
+			],
+			[
+				"popup-delete",
+				"popup-delete-project"
+			],
+			[
+				"setup",
+				"setupTaskPage"
+			],
+			[
+				"pop",
+				"popup-project-graph"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"show",
+				"showTodo"
+			],
+			[
+				"orig",
+				"originalPhase"
+			],
+			[
+				"phase",
+				"phaseOrProject"
+			],
+			[
+				"order",
+				"orderList"
+			],
+			[
+				"pro",
+				"projectsLength"
+			],
+			[
+				"number",
+				"number"
+			],
+			[
+				"get",
+				"getCurrentProject"
+			],
+			[
+				"due",
+				"dueString"
+			],
+			[
+				"tasks",
+				"tasksLengthString"
+			],
+			[
+				"page-project",
+				"page-project-graph"
+			],
+			[
+				"end",
+				"endDate"
+			],
+			[
+				"switch",
+				"btn-switch-to-kanban"
+			],
+			[
+				"htm",
+				"htmlViewButton"
+			],
+			[
+				"btn",
+				"btn-switch-to-kanban"
+			],
+			[
+				"changeP",
+				"changeProjectChoice"
+			],
+			[
+				"return",
+				"returnTasks"
+			],
+			[
+				"retur",
+				"returnTasks"
+			],
+			[
+				"ret",
+				"returnTasks"
+			],
+			[
+				"findTask",
+				"findTaskByNumberInPhase"
+			],
+			[
+				"tem",
+				"tempArray2"
+			],
+			[
+				"temp",
+				"tempID"
+			],
+			[
+				"te",
+				"tempArray2"
+			],
+			[
+				"find",
+				"findProjectByName"
+			],
+			[
+				"tas",
+				"tasksInProject"
+			],
+			[
+				"arra",
+				"arrangedTasks"
+			],
+			[
+				"ul",
+				"ulID"
+			],
+			[
+				"las",
+				"lastIndexOf"
+			],
+			[
+				"findProjectBy",
+				"findProjectByName"
+			],
+			[
+				"li",
+				"list-main"
+			],
+			[
+				"list-",
+				"list-project-todo"
+			],
+			[
+				"ht",
+				"htmlToAddList"
+			],
+			[
+				"to",
+				"toDateString"
+			],
+			[
+				"project",
+				"project"
+			],
+			[
+				"new",
+				"newProject"
+			],
+			[
+				"month",
+				"monthProductivity"
+			],
+			[
+				"mont",
+				"monthProductivity"
+			],
+			[
+				"make",
+				"makeDateObjects"
+			],
+			[
+				"selec",
+				"selectmenu"
+			],
+			[
+				"array",
+				"arrays"
+			],
+			[
+				"task",
+				"tasksPerPhase"
+			],
+			[
+				"data",
+				"data-role"
+			],
+			[
+				"timed",
+				"timedSessions"
+			],
+			[
+				"lcoal",
+				"localStorage"
+			],
+			[
+				"pomod",
+				"pomodoroProject"
+			],
+			[
+				"input",
+				"inputDueDate"
+			],
+			[
+				"length",
+				"lengthOfObject"
+			],
+			[
+				"pr",
+				"projectsLength"
+			],
+			[
+				"leng",
+				"lengthOfObject"
+			],
+			[
+				"word",
+				"worldView"
+			],
+			[
+				"spani",
+				"spanishFluency"
+			],
+			[
+				"span",
+				"spanishScores"
+			],
+			[
+				"spanish",
+				"spanishScoresObj"
+			],
+			[
+				"answer",
+				"answerButton"
+			],
+			[
+				"button",
+				"buttonAnswers"
+			],
+			[
+				"possible",
+				"possibleAnswerNums"
+			],
+			[
+				"correc",
+				"correctNum"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2518,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "subpages/page-edit-task.html",
+			"settings":
+			{
+				"buffer_size": 1915,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "subpages/page-project.html",
+			"settings":
+			{
+				"buffer_size": 7534,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controller-project.js",
+			"settings":
+			{
+				"buffer_size": 12184,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controller-main.js",
+			"settings":
+			{
+				"buffer_size": 7878,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/authentication.js",
+			"settings":
+			{
+				"buffer_size": 11134,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 7415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/controller-productivity.js",
+			"settings":
+			{
+				"buffer_size": 724,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/charts.js",
+			"settings":
+			{
+				"buffer_size": 2860,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/productivity.js",
+			"settings":
+			{
+				"buffer_size": 8101,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/David/Documents/Apps/to-do",
+		"/C/Users/David/Documents/Apps/to-do/css",
+		"/C/Users/David/Documents/Apps/to-do/js",
+		"/C/Users/David/Documents/Apps/to-do/subpages"
+	],
+	"file_history":
+	[
+		"/C/Users/David/Documents/Apps/to-do/subpages/landing.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/app.html",
+		"/C/Users/David/Documents/Apps/to-do/js/main.js",
+		"/C/Users/David/Documents/Apps/to-do/js/functions.js",
+		"/C/Users/David/Documents/Apps/to-do/js/authentication.js",
+		"/C/Users/David/Documents/Apps/to-do/js/notes.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-notes.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-edit-project-and-task.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-productivity.js",
+		"/C/Users/David/Documents/Apps/to-do/js/projects-and-tasks.js",
+		"/C/Users/David/Documents/Apps/to-do/js/prototypes.js",
+		"/C/Users/David/Documents/Apps/to-do/js/charts.js",
+		"/C/Users/David/Documents/Apps/to-do/subpages/productivity.html",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-main.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-add-productivity.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-add-project-and-task.js",
+		"/C/Users/David/Documents/Apps/to-do/js/controller-pomodoro.js",
+		"/C/Users/David/Documents/Apps/to-do/subpages/chart.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/pomodoro-clock.html",
+		"/C/Users/David/Documents/Apps/to-do/js/pomodoro.js",
+		"/C/Users/David/Documents/Apps/to-do/css/styles.css",
+		"/C/Users/David/Documents/Apps/to-do/index.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/page-edit-task.html",
+		"/C/Users/David/Documents/Apps/to-do/js/jquery-2.1.3.js",
+		"/C/Users/David/Documents/Apps/to-do/js/productivity.js",
+		"/C/Users/David/Documents/Apps/to-do/subpages/signin.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/pomodoro.html",
+		"/C/Users/David/Documents/Apps/to-do/TODO",
+		"/C/Users/David/Documents/Apps/to-do/subpages/page-project.html",
+		"/C/Users/David/Documents/Apps/to-do/js/lists.js",
+		"/C/Users/David/Documents/Apps/to-do/subpages/add-task.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/add-productivity.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/project-graph.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/add-project.html",
+		"/C/Users/David/Documents/Apps/to-do/js/unused.js",
+		"/C/Users/David/Documents/Apps/to-do/subpages/signup.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/main.html",
+		"/C/todo/README.md",
+		"/C/Users/David/Documents/Apps/to-do/mobile.html",
+		"/C/Users/David/Documents/Apps/to-do/css/dashboard.css",
+		"/C/Users/David/Documents/Apps/to-do/css/jquery-custom.css",
+		"/C/Users/David/Documents/Apps/to-do/subpages/project.html",
+		"/C/Users/David/Documents/Apps/to-do/subpages/add-project",
+		"/C/Users/David/Documents/Apps/to-do/subpages/project-graph",
+		"/C/Users/David/Documents/Apps/to-do/subpages/test.html",
+		"/C/Users/David/Documents/Apps/to-do/js/jquery.mobile.event.debugger.js",
+		"/C/Users/David/Documents/Apps/to-do/js/ui.js",
+		"/C/Users/David/Documents/Apps/to-do/js/jquery.jqplot.min.js",
+		"/C/Users/David/Documents/Apps/to-do/css/themes/todo.min.css",
+		"/C/Users/David/Documents/Apps/to-do/css/themes/todo.css",
+		"/C/Users/David/Documents/Apps/to-do/css/themes/magic.css",
+		"/C/Users/David/Documents/Apps/to-do/todo.sublime-project",
+		"/C/Users/David/Documents/Apps/to-do/js/setup-pages.js",
+		"/C/Users/David/Documents/Apps/to-do/config.xml",
+		"/C/Users/David/Documents/Apps/to-do/authentication.html",
+		"/C/Users/David/Documents/Apps/to-do/js/vocab.js",
+		"/C/Users/David/Documents/Apps/to-do/template.html",
+		"/C/Users/David/Documents/Apps/to-do/story.html",
+		"/C/Users/David/Documents/Apps/to-do/js/pixi.js",
+		"/C/Users/David/Documents/Apps/to-do/sftp-config.json",
+		"/C/Users/David/Documents/Apps/monkey-read/sftp-config.json",
+		"/C/Users/David/Documents/Apps/double-up/TODO",
+		"/C/Users/David/Documents/Apps/double-up/js/animation.js",
+		"/C/Users/David/Documents/Apps/double-up/js/setup-pages.js",
+		"/C/Users/David/Documents/Apps/double-up/js/main.js",
+		"/C/Users/David/Documents/Apps/double-up/index.html",
+		"/C/Users/David/Documents/Apps/double-up/sftp-config.json",
+		"/C/Users/David/Documents/Apps/double-up/js/pixi.js",
+		"/C/Users/David/Documents/Apps/double-up/js/readings.js",
+		"/C/Users/David/Documents/Apps/double-up/js/fluency.js",
+		"/C/Users/David/Documents/Apps/double-up/js/test.js",
+		"/C/Users/David/Documents/Apps/double-up/js/vocab.js",
+		"/C/Users/David/Desktop/example_1_basics/example 1 - Basics/index.html",
+		"/C/Users/David/Desktop/pixi.js",
+		"/C/Users/David/Documents/Apps/double-up/js/authentication.js",
+		"/C/Users/David/Documents/Apps/double-up/js/ui.js",
+		"/C/Users/David/Documents/Apps/double-up/template.html",
+		"/C/Users/David/Documents/Apps/double-up/test.js",
+		"/C/Users/David/Documents/Apps/double-up/splash.png"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"setupProd",
+			"setupGraphPage",
+			"chart.html",
+			"view-pomodoro",
+			"setupPomodoro",
+			"refresh",
+			"setCurrentProject",
+			"uploadChanges",
+			"setupMainP",
+			"ensureComplete",
+			"ensure",
+			"handleSignin",
+			"uploadChanges",
+			"handleSignin",
+			"ensureComplete",
+			"timeSeries",
+			"timeSeriesWithTarget",
+			"unorderedArr",
+			"unorderedObj",
+			"unordered",
+			"orderList",
+			"setupEditProjectPage",
+			"setupProjectPage",
+			"setupEditProjectPage",
+			"setupEditTaskPage",
+			"btn-save-project",
+			"set",
+			"save",
+			"totalTime",
+			"getAverage",
+			"getTotal",
+			"series",
+			"sessions",
+			"project.sessions",
+			"workDone",
+			"totalUnits",
+			"sessions",
+			"totalUnits",
+			"addProd",
+			"setupUser",
+			"ensure",
+			"getcurrentp",
+			"totaltime",
+			"setupGraph",
+			"workDoneIn",
+			"ensureComplete",
+			"totalT",
+			"saveSess",
+			"getCurrentP",
+			"getCurrentPr",
+			"save",
+			"setupAddP",
+			"setupProj",
+			"btn-pomodoro",
+			"project-graph",
+			"drawChart",
+			"input-start",
+			"subpages",
+			"drawChart",
+			"drawGr",
+			"setupGrap",
+			"signoutButt",
+			"nodejs",
+			".load(",
+			"hashChange()",
+			"refresh()",
+			"clearU",
+			"clearUser",
+			"nodejs",
+			"convertStrings",
+			"window.location.hash",
+			"tasksLength",
+			"refreshMain",
+			"setupPomo",
+			"setupPr",
+			"is deleted",
+			"getCurrent",
+			"hrefString",
+			"setupProject",
+			"delCloseTag",
+			"delOpenTag",
+			"setupAddP",
+			"popup-add-task",
+			"popup-project-graph",
+			"popup-delete-project",
+			"popup-pomodoro",
+			"popup-add",
+			"fixed",
+			"absolute",
+			"fixed",
+			"project.html",
+			"setupAddTas",
+			"datebox",
+			"nav",
+			"setupMainPage",
+			"setupProjectPage",
+			"timeLeft",
+			"savePomodoro",
+			"findTaskByNumberInPhase",
+			"findTaskByNumber",
+			"find",
+			"findTasksByPhase",
+			"setupG",
+			"setupGraph",
+			"orderList",
+			"findMany",
+			"orderList",
+			"findMany",
+			"findOne",
+			"phase",
+			"Phase",
+			"phase",
+			"Phase",
+			"phase",
+			"findTaskByNu",
+			"findMany",
+			"findTaskByNu",
+			"orderList",
+			"pageinit",
+			"pagecreate",
+			"pagebeforecreate",
+			"pagebeforeshow",
+			"pageshow",
+			"pagecontainerbeforeshow",
+			"pageshow",
+			"pagecontainerbeforeshow",
+			"pageshow",
+			"pagebeforeshow"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"productivity",
+			"todo",
+			"select-project",
+			"getCurrentTask()",
+			"getCurrentProject()",
+			"localStorage[\"currentTask\"]",
+			"localStorage[\"currentProject\"]",
+			"btn-add-page",
+			"btn-pomodoro-page",
+			"form-change-password",
+			"form-change-username",
+			"btn-update",
+			"btn-clear",
+			"btn-user-info",
+			"btn-pomodoro",
+			"btn-home",
+			"edit-project",
+			"edit-task",
+			"div-edit-task",
+			"btn-start-pomodoro",
+			"btn-save-task",
+			"btn-add-task",
+			"btn-add-project",
+			"btn-task-page",
+			"btn-project-page",
+			"panel-greeting",
+			"page-records",
+			"btn-records",
+			"btn-profile",
+			"btn-signout",
+			"btn-add",
+			"div-profile",
+			"page-profile",
+			"div-pomodoro",
+			"newTask"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2268,
+								2268
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "subpages/page-edit-task.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "subpages/page-project.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5909,
+								5909
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1369.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/controller-project.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3536,
+								3536
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 443.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/controller-main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1537,
+								1537
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/authentication.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6008,
+								6008
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2463.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1879.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/controller-productivity.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 724,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "js/charts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								574
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 391.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "js/productivity.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8101,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 2451.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "todo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

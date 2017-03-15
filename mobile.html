@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+	<title>&nbsp;</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100&subset=latin,latin-ext' rel='stylesheet' type='text/css'>-->
+		<link rel="stylesheet" href="css/themes/todo.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+
+		<link rel="stylesheet" href="css/jqm-datebox.min.css">
+
+		<link rel="stylesheet" href="css/jquery.jqplot.min.css" />
+
+		<link rel="stylesheet" href="css/styles.css">
+
+		<!--JAVASCRIPT*************************************************************************************************-->
+
+		<script src="js/jquery-2.1.3.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/modernizr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="cordova.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+		<script src="js/jquery.mobile-1.4.5.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript" src="js/datebox/doc.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.mode.datebox.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.mode.flipbox.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.mode.slidebox.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jqm-datebox.mode.customflip.min.js"></script>
+		<script type="text/javascript" src="js/datebox/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+						
+		<!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+		<script type="text/javascript" src="js/google/jsapi"></script>
+
+		<script type="text/javascript" src="js/jquery.jqplot.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.barRenderer.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.canvasTextRenderer.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.categoryAxisRenderer.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.dateAxisRenderer.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.highlighter.min.js"></script>
+		<script type="text/javascript" src="js/jqplot-plugins/jqplot.pointLabels.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.mobile.event.debugger.js"></script>
+
+		<script src="js/prototypes.js"></script>
+		<script src="js/authentication.js"></script>
+		<script src="js/ui.js"></script>
+		<script src="js/lists.js"></script>
+		<script src="js/setup-pages.js"></script>
+		<script src="js/functions.js"></script>
+		
+		<script src="js/main.js"></script>
+
+		<style>
+			.ui-table-columntoggle-btn {
+				display: none;
+			}
+			tr:nth-child(even) {
+				background: #e9e9e9;
+			}
+
+			.ui-icon-facebook:after {
+				background-image: url("img/fb.png");
+				-moz-border-radius: 5px;
+			    -webkit-border-radius:5px;
+			    border-radius:5px;
+			}
+			.ui-icon-twitter:after {
+				background-image: url("img/twitter.png");
+				-moz-border-radius: 5px;
+			    -webkit-border-radius:5px;
+			    border-radius:5px;
+			}
+			.ui-icon-google:after {
+				background-image: url("img/google.png");
+				-moz-border-radius: 5px;
+			    -webkit-border-radius:5px;
+			    border-radius:5px;
+			}
+
+			.center-button{
+				margin: 0 auto;
+			}
+
+			.ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+
+			.connectedSortable {
+			    border: 1px solid #eee;
+			    min-height: 30px;
+			    /*width: 142px;
+			    min-height: 20px;
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 5px 0 0 0;
+			    margin-right: 10px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--MAIN PAGE**********************************************************************************************-->
+
+		<div id="page-main" data-role="page" data-theme="a">
+			<div data-role="header">
+				<h1>To do!</h1>
+				<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+				<a href="" data-icon="star" data-iconpos="notext">Start!</a>
+			</div>
+
+			<div data-role="main" class="ui-content">
+
+				<!--PROJECT LIST -->
+				<div id="div-main" class="ui-content">
+					<ul data-role="listview" data-split-icon="action" data-inset="true" id="list-main"></ul>
+				</div>
+
+				<!--ADD BUTTON-->
+				<!-- <a href="#page-add" data-role="button" data-icon="plus" data-iconpos="notext" class="center-button" id="btn-add-page">Add!</a> -->
+
+				<!--ADD PROJECT BUTTON-->
+				<a href="#page-add-project" data-role="button" data-icon="plus" data-iconpos="notext" class="center-button" id="btn-project-page">Add!</a>
+								
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+
+			<div data-role="panel" data-position="left" data-position-fixed="true" data-display="reveal" id="nav-panel">
+
+				<ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
+					<li data-icon="delete" style="background-color:#111;">
+						<a href="#" data-rel="close">Close menu</a>
+					</li>
+					<li>
+						<p id="panel-greeting"></p>
+					</li>
+					<li>
+						<a href="#page-records" id="btn-records">Your records</a>
+					</li>
+					<li>
+						<a href="#page-profile" id="btn-profile">Your profile</a>
+					</li>
+					<li>
+						<a data-role="button" id="btn-signout">Sign out</a>
+					</li>
+				</ul>
+
+				<!-- panel content goes here -->
+			</div><!-- /panel -->
+		</div>
+
+		<!--ADD PAGE*********************************************************************************************-->
+
+		<div data-role="page" data-theme="a" id="page-add">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="addHeader">Add a project or task</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<p>
+					<!-- <a href="#page-add-project" data-role="button" id="btn-project-page">Add project</a> -->
+					<!-- <a href="#page-add-task" data-role="button" id="btn-task-page">Add task</a> -->
+				</p>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--ADD PROJECT PAGE*********************************************************************************************-->
+		<!--Only for adding new projects-->
+
+		<div data-role="page" data-theme="a" id="page-add-project">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="addHeader">Add a project</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+			    <label for="txt-project">My project</label>
+		        <input type="text" name="txt-project" id="txt-project" value="">
+
+		        <a data-role="button" id="btn-add-project">Add!</a>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--ADD TASK PAGE*********************************************************************************************-->
+		<!--Only for adding new tasks-->
+
+		<div data-role="page" data-theme="a" id="page-add-task">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="addHeader">Add a task</h1>
+			</div>
+
+			<div data-role="main" class="ui-content">
+				<!-- <div class="ui-field-contain">
+					<label for="select-project" class="select">Which project?</label>
+					<select name="select-project" id="select-project"></select>
+				</div> -->
+
+			    <label for="txt-task">My new task</label>
+		        <input type="text" name="txt-task" id="txt-task" value="">
+
+		        <a data-role="button" id="btn-add-task">Add!</a>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--PROJECT PAGE*********************************************************************************************-->
+		<!--Gives an overview of the project, including the assigned tasks and the total amount of time, level of productivity, etc.-->
+
+		<div data-role="page" data-theme="a" id="view-project">
+			<div data-role="header">
+				<a href="#page-main" data-icon="home" class="btn-home">Home</a>
+				<h1 id="projectHeader">Your new project</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" id="div-project">
+				<div id="div-project-intro"></div>
+				<div id="div-project-todo"></div>
+				<div id="div-project-kanban"></div>
+			</div>
+
+			<div data-role="popup" id="popup-delete-project">
+				<p>Are you surely sure?</p>
+				<input type="button" id="btn-delete-project" value="Be gone with it!">
+			</div>
+
+			<div data-role="popup" id="popup-project">
+				<p>Popup!</p>
+				<a href="#page-pomodoro" class="btn-pomodoro-page">Pomodoro?</a>
+			</div>
+
+			<div data-role="popup" id="popup-task">
+				<p>Popup!</p>
+				<a href="#page-edit-task" class="edit-task">Edit task</a>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" id="nav-project">
+					<ul>
+						<li><a href="#page-pomodoro" class="btn-pomodoro-page" data-icon="clock">Pomodoro!</a></li><!-- pomodoro -->
+						<li><a data-icon="bullets" id="btn-switch-view">Switch view</a></li><!-- switch todo/kanban -->
+						<li><a href="#page-add-task" id="btn-task-page" data-icon="plus">Add task</a></li><!-- add task! -->
+						<li><a href="#view-project-graph" id="btn-show-graph" data-icon="grid">Productivity</a></li><!-- see productivity -->
+						<li><a href="#popup-delete-project" data-rel="popup" data-transition="pop" data-icon="delete">Delete</a></li><!-- delete -->
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--PROJECT GRAPH PAGE*********************************************************************************************-->
+		<!--Shows the productivity for the given project-->
+
+		<div data-role="page" data-theme="a" id="view-project-graph">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="projectGraphHeader">Your productivity</h1>
+			</div>
+
+			<div class="ui-content">
+				<label for="input-start-date">Choose start date:</label> 
+				<input type="text" id="input-start-date">
+
+				<label for="input-end-date">Choose end date:</label> 
+				<input type="text" id="input-end-date">
+
+				<input id="btn-reset-graph" type="button" value="Reset graph" class="ui-input-btn ui-btn">
+			</div>
+
+			<div data-role="main" class="ui-content" id="div-project-graph"></div>
+
+			<div id="chartdiv" data-role="content" style="height:400px;width:600px;"></div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--TASK PAGE**************************************************************************************************-->
+		<!--Gives an overview of the task (though not sure what this means...)-->
+
+		<!--EDIT PROJECT PAGE*********************************************************************************************-->
+		<!--Allows you to edit the project (though not sure what this means...)-->
+
+		<!--EDIT TASK PAGE*********************************************************************************************-->
+		<!--Allows you to edit the task-->
+
+		<div data-role="page" data-theme="a" id="page-edit-task">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="taskHeader">Your task</h1>
+			</div>
+			
+			<div data-role="main" class="ui-content" >
+				<div id="div-edit-task"></div>
+				<div>
+					<label for="taskName">Task name:</label> 
+					<input type="text" name="taskName" id="taskName">
+
+					<label for="changeProjectChoice" class="select">Which project?</label> 
+					<select name="changeProjectChoice" id="changeProjectChoice"></select>
+
+					<label for="phaseChoice" class="select">Which phase?</label> 
+					<select name="phaseChoice" id="phaseChoice"></select>
+
+					<label for="inputDueDate">Set due date:</label> 
+					<input type="text" id="inputDueDate">
+
+					<label for="switchDone">Have you completed the task?</label>
+					<input type="checkbox" name="switchDone" id="switchDone">
+
+					<a href="#popup-delete-task" data-rel="popup" data-transition="pop" class="ui-btn">DELETE this task?</a>
+				</div>
+				<div>
+					<a data-role='button' id='btn-save-task'>Save changes?</a>
+				</div>
+			</div>
+
+			<div data-role="popup" id="popup-delete-task">
+				<p>Are you surely sure?</p>
+				<input type="button" id="btn-delete-task" value="Be gone with it!">
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--START POMODORO PAGE*********************************************************************************************-->
+
+		<div data-role="page" data-theme="a" id="page-pomodoro">
+			<div data-role="header" data-add-back-btn="true">
+				<h1 id="pomodoroHeader">Pomodoro!</h1>
+			</div>
+			
+			<div data-role="main" class="ui-content">
+				<div id="div-pomodoro"></div>
+				<a data-role='button' id='btn-start-pomodoro'>Start pomodoro!</a>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--PROFILE PAGE********************************************************************************************************-->
+
+		<div data-role="page" data-theme="a" class="box" id="page-profile">
+			<div data-role="header" data-add-back-btn="true">
+				<h1>Your profile</h1>
+			</div>
+
+			<div data-role="main" class="ui-content" id="div-profile">
+				<!-- <p>Currently, your dictionary is empty. Whenever you add a word, it will appear here.</p> -->
+				
+				<!-- <div data-role="popup" id="popupChangeUsername" data-theme="a">
+				<h3>Change username</h3>
+		        <form id="form-change-username">
+			        <label for="newUsername">New username:</label>
+			        <input type="text" name="newUsername" id="newUsername" value="">
+
+			        <button type="submit" id="submitUsernameButton">Change!</button>
+			    </form>
+				</div>
+
+				<div data-role="popup" id="popupChangePassword" data-theme="a">
+				<h3>Change password</h3>
+		        <form id="form-change-password">
+		        	<label for="txt-password">Old password:</label>
+			        <input type="text" name="txt-old-password" id="txt-old-password" value="">
+			        <label for="txt-password">New password:</label>
+			        <input type="text" name="txt-new-password" id="txt-new-password" value="">
+
+			        <input type="submit" value="Change!" id="submitPasswordButton">
+			    </form>
+				</div> -->
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<h1>Copyright © 2015 David Michael</h1>
+			</div>
+		</div>
+
+		<!--POPUPS*************************************************************************************************************-->
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<h1>Settings</h1>
+
+
+<ul class="nav nav-tabs" id="nav-settings">
+  	<li role="presentation" class="active"><a href="#tab-general" role="tab" data-toggle="tab" aria-controls="tab-general" aria-expanded="true">General</a></li>
+  	<li role="presentation"><a href="#tab-password" role="tab" data-toggle="tab" aria-controls="password" aria-expanded="false">Password</a></li>
+  	<!-- <li role="presentation"><a href="#tab-notifications" role="tab" data-toggle="tab" aria-controls="notifications" aria-expanded="false">Notifications</a></li> -->
+</ul>
+
+<div class="tab-content a-little-tab">
+	<div role="tabpanel" class="tab-pane active fade in row" id="tab-general">
+		<div id="form-settings" class="col-md-6">
+			<div class="form-group has-feedback" id="group-change-username">
+				<label id="label-username-availability" for="txt-settings-username">Enter a new username:</label>
+				<input type="text" class="form-control" name="txt-settings-username" id="txt-settings-username" value="" />
+				<span id="icon-user-available" class="form-control-feedback" aria-hidden="true"></span>
+			  	<span id="icon-user-available-sr" class="sr-only">(success)</span>
+			</div>
+
+			<div class="form-group">
+				<label for="txt-settings-firstname">First name:</label>
+				<input type="text" class="form-control" name="txt-settings-firstname" id="txt-settings-firstname" value="" />
+			</div>
+
+			<div class="form-group">
+				<label for="txt-settings-lastname">Last name:</label>
+				<input type="text" class="form-control" name="txt-settings-lastname" id="txt-settings-lastname" value="" />
+			</div>
+
+			<div class="form-group">
+				<label for="txt-settings-email">Email:</label>
+				<input type="text" class="form-control" name="txt-settings-email" id="txt-settings-email" value="" />
+			</div>
+
+			<!-- type="submit" -->
+			<button class="btn btn-primary" id="btn-settings-submit" disabled>Save changes</button>
+
+			<div id="div-settings-success-message" class="alert alert-success" style="margin-top: 10px; display: none;">
+				<p>Settings successfully changed!</p>
+			</div>
+		</div>
+	</div>
+
+	<div role="tabpanel" class="tab-pane fade row" id="tab-password">
+		<div id="form-password" class="col-md-6">
+			<div class="form-group has-feedback" id="group-current-password">
+				<label id="label-current-password" for="txt-settings-current-password">Enter your current password:</label>
+				<input type="password" class="form-control" name="txt-settings-current-password" id="txt-settings-current-password" value="" placeholder="Current password" />
+			</div>
+			<div class="form-group has-feedback" id="group-new-password">
+				<label id="label-new-password" for="txt-settings-new-password">Enter your new password:</label>
+				<input type="password" class="form-control" name="txt-settings-new-password" id="txt-settings-new-password" value="" placeholder="Should contain at least one special character or one number" />
+				<span id="icon-password-valid" class="form-control-feedback" aria-hidden="true"></span>
+			  	<span id="icon-password-valid-sr" class="sr-only">(success)</span>
+			</div>
+			<div class="form-group has-feedback" id="group-confirm-password">
+				<label id="label-confirm-password" for="txt-settings-confirm-password">Confirm your new password:</label>
+				<input type="password" class="form-control" name="txt-settings-confirm-password" id="txt-settings-confirm-password" value="" />
+				<span id="icon-password-confirm-valid" class="form-control-feedback" aria-hidden="true"></span>
+			  	<span id="icon-password-confirm-valid-sr" class="sr-only">(success)</span>
+			</div>
+			<button class="btn btn-primary" id="btn-password-submit" disabled>Save new password</button>
+			<div id="div-password-error-message" style="margin-top: 10px;">
+				<p></p>
+			</div>
+			<div id="div-password-success-message" class="alert alert-success" style="margin-top: 10px; display: none;">
+				<p>Password successfully changed!</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div role="tabpanel" class="tab-pane fade row" id="tab-notifications"></div> -->
+</div>
+
+

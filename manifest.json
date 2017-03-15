@@ -1,0 +1,12 @@
+{
+  "name": "Means of Production",
+  "short_name": "Means",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "The best way to get productive.",
+  "icons": [{
+    "src": "favicon-trans.ico",
+    "sizes": "48x48 72x72 96x96 128x128 256x256"
+  }]
+}
