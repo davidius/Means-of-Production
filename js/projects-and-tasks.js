@@ -3,14 +3,16 @@ function addProject(){
 	var projects = userDatabase.projects.slice();
 	
 	var nextAvailableProjectId = getNextAvailableId(projects);
+	var nextAvailableProjectNumber = getNextAvailableNumber(projects);
 
 	if($("#txt-project").val() != ""){
-		var newProject = new Project(nextAvailableProjectId, $("#txt-project").val(), nextAvailableProjectId); //id, name, number
+		var newProject = new Project(nextAvailableProjectId, $("#txt-project").val(), nextAvailableProjectNumber); //id, name, number
 		
 		projects.push(newProject);
 		localStorage["currentProject"] = parseInt(newProject.id);
+		userDatabase.projects = projects;
 
-		projectsRef.set(projects);
+		projectsRef.set(userDatabase.projects);
 
 		$("#modal-add-project").modal("hide");
 		return true;
@@ -34,7 +36,7 @@ function addTask(){
 		newTask = new Task($("#txt-task").val());
 
 		newTask.id = nextAvailableTaskId;
-		newTask.number = projectTasks.length;
+		newTask.number = getNextAvailableNumber(localTasks);
 		
 		newTask.projectId = getCurrentProject().id;
 		phases = findOne("project", "id", newTask.projectId).phases;
@@ -44,8 +46,9 @@ function addTask(){
 		// update the localTasks object and then localStorage
 		localTasks.push(newTask);
 		userDatabase.currentTask = newTask;
+		userDatabase.tasks = localTasks;
 
-		tasksRef.set(localTasks)
+		tasksRef.set(userDatabase.tasks)
 		
 		$("#modal-add-task").modal("hide");
 		return true;
@@ -97,7 +100,8 @@ function saveProject(project){
 
 	//update userDatabase and upload to firebase
 	projects[indexOfProject] = project;
-	projectsRef.set(projects);
+	userDatabase.projects = projects;
+	projectsRef.set(userDatabase.projects);
 	
 	setupOverviewPage(); // @TODO: is this repeated in refresh???
 	$("#modal-edit-project").modal("hide");
@@ -175,7 +179,10 @@ function saveTask(task){
 		//update localStorage
 		tasks[indexOfTask] = task;
 
-		tasksRef.set(tasks);
+		userDatabase.tasks = tasks;
+
+		tasksRef.set(userDatabase.tasks);
+		uploadReminders(userDatabase.email);
 
 		$("#modal-edit-task").modal("hide");
 		return true;
@@ -206,8 +213,11 @@ function deleteProject(project){
 	localStorage["currentProject"] = "";
 	localStorage["currentTask"] = "";
 
-	projectsRef.set(projects);
-	tasksRef.set(tasks);
+	userDatabase.projects = projects;
+	userDatabase.tasks = tasks;
+
+	projectsRef.set(userDatabase.projects);
+	tasksRef.set(userDatabase.tasks);
 
 	$("#modal-delete-project").modal("hide");
 	window.location.hash = "";
@@ -215,19 +225,22 @@ function deleteProject(project){
 
 function deleteTask(task){
 	var tasks = userDatabase.tasks.slice();
-
+	var associatedProject = findOne("project", "id", task.projectId);
+	
 	// get the index of the task
 	var indexOfTask = findIndexOfProjectOrTask("task", task);
 	
 	tasks.splice(indexOfTask, 1);
 
+	userDatabase.tasks = tasks;
+	ensureTaskNumbersAreWellOrdered(associatedProject);
+
 	localStorage["currentTask"] = "";
 
-	tasksRef.set(tasks);
+	tasksRef.set(userDatabase.tasks);
+	uploadReminders(userDatabase.email);
 	
 	$("#modal-delete-task").modal("hide");
-
-	// @TODO: create a function that assigns numbers to all the tasks of a project. This should be called whenever a task is deleted...
 }
 
 function checkTask(id, checked){
@@ -243,23 +256,40 @@ function checkTask(id, checked){
 	else{
 		task.done = false;
 	}
-	tasks[indexOfTask] = task;
 
-	tasksRef.set(tasks);
+	tasks[indexOfTask] = task;
+	userDatabase.tasks = tasks;
+	tasksRef.set(userDatabase.tasks);
 }
 
-function sortNumbersOfTasksInProject(project){
-	// this function will look at all the tasks in a project and ensure that they are numbered correctly. This should be called whenever task ordering is affected, i.e. when a new task is added, a task is deleted, tasks are rearranged, etc.
-	console.log("'" + project.name + "':");
-	var tasks = findMany("tasks", "projectId", project);
-	var numbers = [];
-
+// this function looks at all the tasks in a project and ensures that they are numbered correctly
+// This should be called whenever task ordering is affected, i.e. when a new task is added, a task is deleted, tasks are rearranged, etc.
+function ensureTaskNumbersAreWellOrdered(project){
+	var tasks = orderTaskList(findMany("tasks", "projectId", project), "todo", project);
+	
 	$.each(tasks, function(index, task){
-		console.log("task '" + task.name + "' has number: " + task.number);
-		numbers.push(task.number);
+		task.number = index;
 	});
 
-	console.dir(numbers);
+	$.each(tasks, function(index, task){
+		var correspondingIndex = findIndexOfProjectOrTask("task", task);
+		userDatabase.tasks[correspondingIndex] = task;
+	});
+
+	$.each(project.phases, function(indexOfPhase, phaseToCheck){
+		ensureTaskNumbersInPhaseAreWellOrdered(project, indexOfPhase);
+	});
+}
+
+// this function looks at all the tasks in a project phase and ensures that they are numbered correctly
+function ensureTaskNumbersInPhaseAreWellOrdered(project, phaseNumber){
+	var tasks = orderTaskPhaseList(project, phaseNumber);
+	
+	$.each(tasks, function(index, task){
+		task.numberInPhase = index;
+		var correspondingIndex = findIndexOfProjectOrTask("task", task);
+		userDatabase.tasks[correspondingIndex] = task;
+	});
 }
 
 function postponeTaskTillTomorrow(id){
@@ -277,6 +307,6 @@ function postponeTaskTillTomorrow(id){
 	task.dueDate = newDueDateAsString;
 	
 	tasks[indexOfTask] = task;
-
-	tasksRef.set(tasks);
+	userDatabase.tasks = tasks;
+	tasksRef.set(userDatabase.tasks);
 }

@@ -896,3 +896,20 @@ function checkIfUsernameIsAvailable(usernameToCheck){
 		}
 	});
 }
+
+// orders the user's tasks in the user's order of priority
+// NOTE THAT CURRENTLY THIS DOES NOT ORDER IN TERMS OF PRIORITY, IT JUST FILTERS OUT DELETED TASKS.
+function orderTasks(){
+	var unorderedArr = userDatabase.tasks.slice();
+	var ordered = []; // not yet used
+	var numbers = []; // not yet used
+
+	// remove all deleted tasks from the array
+	for(var i=unorderedArr.length-1; i>=0; i--){
+		if(unorderedArr[i].deleted){
+			unorderedArr.splice(i, 1);
+		}
+	}
+	
+	return unorderedArr;
+}

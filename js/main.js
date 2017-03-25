@@ -102,6 +102,7 @@ function uploadUserDatabaseToFirebase(user){
     	showCompletedTasks: userDatabase.showCompletedTasks
     }).then(function(){
     	console.log("successfully uploaded to firebase");
+    	uploadReminders(userDatabase.email);
     	refresh();
     });
 }

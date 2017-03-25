@@ -137,7 +137,7 @@ function populateProjectList(){
 
 	// for each project, add a link in the sidebar
 	for (var i=0; i<projectsLength; i++){
-		var tasks = orderList(findMany("tasks", "projectId", projects[i]), "todo", projects[i]); //for the purpose of finding the number of tasks only
+		var tasks = orderTaskList(findMany("tasks", "projectId", projects[i]), "todo", projects[i]); //for the purpose of finding the number of tasks only
 		for (var j=tasks.length-1; j>=0; j--){
 			if(tasks[j].done){
 				tasks.splice(j, 1);

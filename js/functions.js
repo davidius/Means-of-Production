@@ -30,29 +30,6 @@ function findOne(what, by, argX){
 	else return false;
 }
 
-/*function findOneLocal(what, by, argX){
-	var array = {};
-	var thingToReturn;
-	
-	if(what == "task"){
-		array = JSON.parse(localStorage["tasks"]);
-	}
-	else if(what == "project"){
-		array = JSON.parse(localStorage["projects"]);
-	}
-	
-	$.each(array, function(i, elem){
-		if(elem[by] == argX){
-			thingToReturn = elem;
-		}
-	});
-
-	if(typeof thingToReturn !== "undefined"){
-		return thingToReturn;
-	}
-	else return false;
-}*/
-
 function findMany(what, where, argX){
 	var array = [];
 	var returnArray = [];
@@ -134,6 +111,7 @@ function findInArray(what, by, argX, array){
 }
 
 // typeOfThing can either be "project" or "task"
+// call as follows: findIndexOfProjectOrTask("task", taskToCheck);
 function findIndexOfProjectOrTask(typeOfThing, actualThing){
 	var indexToReturn;
 	var arrayToScan = [];
@@ -156,7 +134,6 @@ function findIndexOfProjectOrTask(typeOfThing, actualThing){
 
 function getNextAvailableId(array){
 	// make an array of all project IDs in order to ascertain which is the next available one
-	
 	var arrayOfIDs = [];
 	var nextAvailableId;
 
@@ -172,6 +149,25 @@ function getNextAvailableId(array){
 	}
 
 	return nextAvailableId;
+}
+
+function getNextAvailableNumber(array){
+	// make an array of all project IDs in order to ascertain which is the next available one
+	var arrayOfNumbers = [];
+	var nextAvailableNumber;
+
+	$.each(array, function(index, elem){
+		arrayOfNumbers.push(elem.number);
+	});
+
+	if(arrayOfNumbers.length > 0){
+		nextAvailableNumber = Math.max(...arrayOfNumbers) + 1;
+	}
+	else{
+		nextAvailableNumber = 0;
+	}
+
+	return nextAvailableNumber;
 }
 
 function improvedFind(){
@@ -215,23 +211,6 @@ function orderProjects(){
 	});
 
 	return ordered;
-}
-
-// orders the user's tasks in the user's order of priority
-// NOTE THAT CURRENTLY THIS DOES NOT ORDER IN TERMS OF PRIORITY, IT JUST FILTERS OUT DELETED TASKS.
-function orderTasks(){
-	var unorderedArr = userDatabase.tasks.slice();
-	var ordered = []; // not yet used
-	var numbers = []; // not yet used
-
-	// remove all deleted tasks from the array
-	for(var i=unorderedArr.length-1; i>=0; i--){
-		if(unorderedArr[i].deleted){
-			unorderedArr.splice(i, 1);
-		}
-	}
-	
-	return unorderedArr;
 }
 
 // returns a list of tasks in a given range
@@ -317,11 +296,12 @@ function getCompletedTasks(tasks){
 }
 
 //orders a task list (whether in todo or kanban view)
-function orderList(unorderedArr, where, phaseOrProject){
+function orderTaskList(unorderedArr, where, phaseOrProject){
 	//"where" can be "todo" or "phase"
 	var copyOfUnorderedArr = unorderedArr.slice();
 	var ordered = [];
 	var numbers = [];
+	var allTasksInProject = findMany("tasks", "projectId", phaseOrProject);
 
 	//remove all deleted tasks from the array
 	for(var i=copyOfUnorderedArr.length-1; i>=0; i--){
@@ -330,38 +310,51 @@ function orderList(unorderedArr, where, phaseOrProject){
 		}
 	}
 
-	/*function compareNumbers(a,b){
-		return a - b;
-	}*/
-	
 	if(where == "todo"){
 		$.each(copyOfUnorderedArr, function(index, elem){
 			numbers[index] = elem.number;
 		});
 		
 		numbers.sort(compareNumbers);
-		$.each(numbers, function(index, elem){
-			var corresponding = findInArray("task", "number", elem, findMany("tasks", "projectId", phaseOrProject));
-			ordered.push(corresponding);
-		});
-	}
-	else if(where == "phase"){
-		$.each(copyOfUnorderedArr, function(index, elem){
-			numbers[index] = elem.numberInPhase;
-		});
-		
-		numbers.sort(compareNumbers);
-		$.each(numbers, function(index, elem){
-			var corresponding = findInArray("task", "numberInPhase", elem, findInArray("tasks", "phase", phaseOrProject, findMany("tasks", "projectId", getCurrentProject())));
-			if(typeof corresponding !== "undefined"){
-				ordered.push(corresponding);
-			}
+		$.each(numbers, function(index, numberOfTask){
+			var correspondingTasks = findInArray("tasks", "number", numberOfTask, allTasksInProject);
+			$.each(correspondingTasks, function(indexOfTask, correspondingTask){
+				if(ordered.indexOf(correspondingTask) == -1){
+					ordered.push(correspondingTask);
+				}
+			});
 		});
 	}
 	
 	if(typeof ordered[0] === "undefined"){
 		ordered.splice(0, ordered.length);
 	}
+
+	return ordered;
+}
+
+// @IMPORTANT: phase is given in numerical form (it's possible that the user will give multiple phases the same name)
+function orderTaskPhaseList(project, phaseNumber){
+	var allTasksInProject = findMany("tasks", "projectId", project);
+	var tasksInPhase = findInArray("tasks", "phase", project.phases[phaseNumber], allTasksInProject);
+
+	var numbers = [];
+	var ordered = [];
+
+	$.each(tasksInPhase, function(index, elem){
+		numbers.push(elem.numberInPhase);
+	});
+	
+	numbers.sort(compareNumbers);
+
+	$.each(numbers, function(index, numberInPhaseOfTask){
+		var correspondingTasks = findInArray("tasks", "numberInPhase", numberInPhaseOfTask, tasksInPhase);
+		$.each(correspondingTasks, function(indexOfTask, correspondingTask){
+			if(ordered.indexOf(correspondingTask) == -1){
+				ordered.push(correspondingTask);
+			}
+		});
+	});
 
 	return ordered;
 }

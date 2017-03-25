@@ -1,8 +1,10 @@
 function setupProjectPage(){
-	var tasks = orderList(findMany("tasks", "projectId", getCurrentProject()), "todo", getCurrentProject());
+	var tasks = orderTaskList(findMany("tasks", "projectId", getCurrentProject()), "todo", getCurrentProject());
 	var phasesLength = getCurrentProject().phases.length;
 	var tasksPerPhase = [];
 	var arrayLengths = [];
+
+	var allTasksInProject = findMany("tasks", "projectId", getCurrentProject());
 	
 	var htmlHeader = '';
 	var htmlIntro = '';
@@ -93,7 +95,9 @@ function setupProjectPage(){
 			// for each phase...
 			htmlKanban += '<th style="width:33.3%">' + getCurrentProject().phases[i] + '</th>';
 			// ...create an array containing all the tasks that belong to this phase
-			tasksPerPhase[i] = orderList(findInArray("tasks", "phase", getCurrentProject().phases[i], findMany("tasks", "projectId", getCurrentProject())), "phase", getCurrentProject().phases[i]); 
+			
+			var unorderedTasksInPhase = findInArray("tasks", "phase", getCurrentProject().phases[i], allTasksInProject);
+			tasksPerPhase[i] = orderTaskPhaseList(getCurrentProject(), i);
 			arrayLengths.push(tasksPerPhase[i].length);
 		}
 		htmlKanban += '</tr></thead><tbody><tr>';
@@ -225,7 +229,7 @@ function setupProjectPage(){
     		showCompletedTasks = false;
     	}
     	userDatabase.showCompletedTasks = showCompletedTasks;
-    	refresh();
+    	uploadChanges();
     });
 
     // $("#btn-show-graph").off("click").on("click", setupProductivityPage);

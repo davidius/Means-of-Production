@@ -100,7 +100,7 @@ function handleSignout(){
 	clearUser();
 }
 
-function uploadReminders(email, username){
+function uploadReminders(email){
 	var tasks = userDatabase.tasks.slice();
 	var reminders = [];
 	$.each(tasks, function(i, elem){
@@ -117,27 +117,26 @@ function uploadReminders(email, username){
 			}
 		}
 	});
-	
+
 	$.ajax ({
 	    url: theURL + '/reminders',
 	    type: "POST",
 	    data: JSON.stringify({
 	    	"email": email,
-	    	"username": username,
 	    	"reminders": reminders
 	    }),
 	    dataType: "json",
 	    contentType: "application/json; charset=utf-8",
-	    /*success: function(res){
+	    success: function(res){
 	    	console.log("A response!");
 	        if(res) {
 	        	if(res.message == "success"){
-	        		console.log("set up a timed email! Date: " + res.date);
+	        		console.log("set up a timed email!");
 	        	}
 	        } else {
 				alert("The email didn't send, for some reason...", function() {});
 			}
-		}*/
+		}
 	});
 }
 
